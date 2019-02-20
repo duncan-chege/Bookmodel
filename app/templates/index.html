@@ -2,6 +2,36 @@
 
 {% block content %}
 
-<h1>your codes come in here</h1>
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock%}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <img src="static/images/landing.jpg" alt="model image" height="510px" width="100%"></img>
+    </div>
+    <div class="col-md-6">
+
+      <div id="first">
+        <h4><strong>WELCOME TO BOOKMODEL</strong></h4>
+      </div>
+
+      <div id="two">
+        <h5>Login to your account and book our models <br>for commercial use</h5>
+      </div>
+
+      <div id="button">
+        <button type="button" class="btn btn-light">Light</button>
+      </div>
+
+      <div id="button">
+        <button type="button" class="btn btn-light">Light</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 {% endblock%}
