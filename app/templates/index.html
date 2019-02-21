@@ -10,22 +10,24 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6">
-      <img src="static/images/landing.jpg" alt="model image" height="510px" width="100%"></img>
+      <div class="image">
+      <img src="static/images/index1.jpeg" alt="model-image"></img>
+    </div>
     </div>
     <div class="col-md-6">
 
       <div id="first">
-        <h4><strong>WELCOME TO BOOKMODEL</strong></h4>
+        <h4 class="intro">Welcome to Book-a-Model</h4>
       </div>
 
       <div id="two">
-        <h5>Login to your account and book our models <br>for commercial use</h5>
+        <h5>Login to your account and book our models for commercial use</h5>
       </div>
 
       <div id="button">
-        <a href="{{url_for('auth.register')}}"><button type="button" class="btn btn-primary btn-lg" >SIGN UP</button></a>
+        <a href="{{url_for('auth.register')}}"><button type="button" class="button-signup" >Sign Up</button></a>
         {% if current_user.is_authenticated %}
-        <a href="{{url_for('main.categories')}}"><button type="button" class="btn btn-primary btn-lg" >VIEW CATEGORIES</button></a>
+        <a href="{{url_for('main.categories')}}"><button type="button" class="button-categories" >View Categories</button></a>
         {% else %}
 
         {%endif%}
