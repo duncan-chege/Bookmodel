@@ -1,0 +1,20 @@
+.image{
+    width: 600px;
+    height: 620px;
+    overflow: hidden;
+    margin-top: -20px;
+    margin-left: -20px;
+  }
+    .image img {
+      width: 100%;
+  }
+  .form-container{
+      width: 520px;
+  }
+  a{
+    color: #db180c;
+  }
+  a:hover{
+    text-decoration: none;
+    color: #d63424;
+  }

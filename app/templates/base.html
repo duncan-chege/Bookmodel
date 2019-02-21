@@ -1,4 +1,14 @@
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+
 {% extends 'bootstrap/base.html'%}
 {% block navbar %}
     {% include 'navbar.html' %}
+{% endblock %}
+
+<!-- Styles block -->
+{% block styles %}
+
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/base.css')}}">
+
 {% endblock %}
