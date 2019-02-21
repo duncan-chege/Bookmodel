@@ -1,0 +1,8 @@
+Hello {{detail.email}}
+Thank you for booking with us, the following are your bookings
+Model Name: {{detail.model_name}}
+Model Age: {{detail.model_age}}
+Event venue: {{detail.event_venue}}
+Hours Booked: {{detail.hours_booked}}
+Model's Job description: {{detail.model_jd}}
+{{model_name}} will get back to you as soon as possible with a quotation.Have a blessed day{{users_username}}
