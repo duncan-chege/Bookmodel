@@ -1,0 +1,13 @@
+.image{
+    width: 400px;
+    height: 480px;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+    .image img {
+      width: 100%;
+  }
+  .model{
+    margin-top: 30px;
+    margin-left: 40px;
+  }
