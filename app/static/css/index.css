@@ -9,3 +9,9 @@
   margin-right: 30px;
   color: blue
 }
+#button{
+  display:inline-block;
+}
+#move{
+  margin-left: 45px;
+}

@@ -10,6 +10,13 @@ from .. import db
 def index():
 
 
-    title = 'Home - Book A Model ke'
+    title = 'Home - Book A Model '
 
     return render_template('index.html', title = title)
+
+@main.route('/categories')
+def categories():
+
+    title = 'Model Categories'
+
+    return render_template('categories.html',title=title)
