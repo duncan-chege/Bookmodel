@@ -1,11 +1,40 @@
-#first{
-  text-align: justify;
 
-  padding-top: 30%;
-  font-weight: bolder;
-
+#first h4{
+  padding-top: 5%;
+  font-weight: 700;
+  font-size: 70px;
 }
 #two{
-  margin-right: 30px;
-  color: blue
+  margin-left: 30px;
+}
+
+#move{
+  margin-left: 45px;
+}
+.image{
+  width: 600px;
+  height: 620px;
+  overflow: hidden;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+  .image img {
+    width: 100%;
+}
+
+.button{
+  transition-duration: 0.4s;
+  display:inline-block;
+}
+.button-signup{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #d63424;
+    margin-left: 200px;
+    margin-top: 30px;
+    padding: 12px;
+}
+.button-signup:hover {
+  background-color: #db180c;
+  color: white;
 }

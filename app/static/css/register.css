@@ -1,0 +1,11 @@
+.image{
+    width: 600px;
+    height: 620px;
+    overflow: hidden;
+    margin-top: -20px;
+    margin-left: -80px;
+  }
+    .image img {
+      width: 100%;
+  }
+ 

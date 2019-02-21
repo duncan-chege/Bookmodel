@@ -2,19 +2,39 @@
 {% import 'bootstrap/wtf.html' as wtf%}
 
 {% block content%}
+<!-- Styles block -->
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+{% endblock%}
 
-<!-- Flash message -->
-{% for message in get_flashed_messages() %}
-<div class="alert alert-danger">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  {{ message }}
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="image">
+        <img src="/static/images/login.jpg" alt="model-image"></img>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+
+      <!-- Flash message -->
+      {% for message in get_flashed_messages() %}
+      <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+      </div>
+      {% endfor %}
+
+      <div class="form-container">
+      {{ wtf.quick_form(login_form) }}
+      </div>
+
+      <p class="dont"> Don't have an account? <a href="{{url_for('auth.register')}}">Join us today</a></p>
+    </div>
+
+  </div>
 </div>
-
-{% endfor %}
-
-{{ wtf.quick_form(login_form) }}
-
-<p class="dont"> Don't have an account? <a href="{{url_for('auth.register')}}">Join us today</a></p>
-
 
 {%endblock%}

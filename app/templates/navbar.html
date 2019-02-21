@@ -1,4 +1,4 @@
-<div class="navbar navbar-inverse" style="background-color: black;" role="navigation">
+ <div class="navbar navbar-inverse" style="background-color: black;" role="navigation">
   <div class="container-fluid">
 
     <div class="navbar-header">
@@ -8,21 +8,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">BOOKMODEL</a>
+      <a class="navbar-brand" href="/">Book-a-Model</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       {% if current_user.is_authenticated %}
-      <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
-      <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+      <!-- <li><a href="{{url_for('main.index',uname=current_user.username)}}">PROFILE</a></li> -->
+      <li><a href="{{url_for('auth.logout')}}">LOG OUT</a></li>
       {% else %}
-      <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+      <li><a href="{{url_for('auth.login')}}">LOGIN</a></li>
       {%endif%}
     </ul>
-    <div class="navbar-collapse collapse" style="background-color: black;">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/">SIGN UP</a></li>
-
-    </div>
 
   </div>
 </div>
