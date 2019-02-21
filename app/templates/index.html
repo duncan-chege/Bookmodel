@@ -23,11 +23,12 @@
       </div>
 
       <div id="button">
-        <button type="button" class="btn btn-light">Light</button>
-      </div>
+        <a href="{{url_for('auth.register')}}"><button type="button" class="btn btn-primary btn-lg" >SIGN UP</button></a>
+        {% if current_user.is_authenticated %}
+        <a href="{{url_for('main.categories')}}"><button type="button" class="btn btn-primary btn-lg" >VIEW CATEGORIES</button></a>
+        {% else %}
 
-      <div id="button">
-        <button type="button" class="btn btn-light">Light</button>
+        {%endif%}
       </div>
 
     </div>
