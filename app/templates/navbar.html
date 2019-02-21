@@ -10,12 +10,14 @@
       </button>
       <a class="navbar-brand" href="/">BOOKMODEL</a>
     </div>
-
-    <div class="navbar-collapse collapse" style="background-color: black;">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/">SIGN UP</a></li>
-
-    </div>
+    <ul class="nav navbar-nav navbar-right">
+      {% if current_user.is_authenticated %}
+      <!-- <li><a href="{{url_for('main.index',uname=current_user.username)}}">PROFILE</a></li> -->
+      <li><a href="{{url_for('auth.logout')}}">LOG OUT</a></li>
+      {% else %}
+      <li><a href="{{url_for('auth.login')}}">LOGIN</a></li>
+      {%endif%}
+    </ul>
 
   </div>
 </div>
