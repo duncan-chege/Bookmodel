@@ -5,19 +5,21 @@
 {% block content %}
 
 <!-- Styles block -->
-{% block styles %}
-
-    {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-
-{% endblock %}
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/register.css')}}">
+{% endblock%}
 
 <div class="container">
     <div class="row">
-            <div class="col-md-5">
-                    <img src="static/images/register.jpg" alt="model-image"></img>
-                </div>
-        <div class="col-md-7">
+
+        <div class="col-md-6">
+            <div class="image">
+                <img src="/static/images/register.jpg" alt="model-image"></img>
+            </div>
+        </div>
+
+        <div class="col-md-6 form">
             {{wtf.quick_form(registration_form)}}
         </div>
     </div>

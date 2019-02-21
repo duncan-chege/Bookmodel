@@ -1,19 +1,13 @@
 
 #first h4{
-  /* text-align: justify; */
-
   padding-top: 5%;
   font-weight: 700;
   font-size: 70px;
-
 }
 #two{
   margin-left: 30px;
 }
 
-#button{
-  display:inline-block;
-}
 #move{
   margin-left: 45px;
 }
@@ -27,8 +21,10 @@
   .image img {
     width: 100%;
 }
+
 .button{
   transition-duration: 0.4s;
+  display:inline-block;
 }
 .button-signup{
     background-color: white; 
