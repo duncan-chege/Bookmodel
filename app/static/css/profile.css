@@ -12,6 +12,33 @@
     font-weight: 700;
   }
   .details{
-      margin-top: 40px;
+      font-size: 16px;
+      margin-top: 100px;
       margin-left: 40px;
   }
+  .button-book{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #d63424;
+    margin-top: 10px;
+    margin-left: 40px;
+    padding: 7px;
+    transition-duration: 0.4s;
+}
+.button-book:hover {
+  background-color: #db180c;
+  color: white;
+}
+.button-back{
+  background-color: white; 
+  color: black; 
+  border: 2px solid #2e2d2d;
+  margin-top: 100px;
+  margin-left: 27px;
+  padding: 5px;
+  transition-duration: 0.4s;
+}
+.button-back:hover {
+background-color: #252525;
+color: white;
+}

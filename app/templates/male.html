@@ -1,6 +1,5 @@
 {% extends 'base.html'%}
 
-
 {% block content %}
 
 {% block styles%}
@@ -15,33 +14,39 @@
       <h3 class="txt"> CHOOSE A MODEL</h3>
     </div>
 
-    <div class="imageslides">
-        <div class="col-md-4">
-            <h3 class="maletitle"> BLAKK MAN </h3>
-            <p class="maletxt"> <b>Love your skin</b></p>
-              <div class="image">
-                <a href="{{url_for('main.male')}}"><img src="static/images/male.jpg" alt="blakk-image"></img></a>
-              </div>
-          </div>
+    <div class="col-md-4">
+      <div class="title">
+        <h3 class="maletitle"> FOREST MAN </h3>
+        <p class="maletxt"> <b>Natural male boldness</b></p>
+      </div>
+      <div class="image">
+        <img src="/static/images/white.jpeg" alt="forestman-image"></img>
+      </div>
+    </div>
 
-      <div class="col-md-4">
+    <div class="col-md-4">
+      <div class="title">
         <h3 class="maletitle2"> SNOW MAN </h3>
         <p class="maletxt2"> <b>Accept your beauty</b></p>
-          <div class="image2">
-           <img src="static/images/male2.jpeg" alt="snowman-image"></img></a>
-          </div>
+      </div>
+      <div class="image2">
+        <img src="/static/images/albino.jpeg" alt="snowman-image"></img>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="title">
+        <h3 class="maletitle"> BLAKK MAN </h3>
+        <p class="maletxt"> <b>Love your skin</b></p>
+      </div>
+      <div class="image">
+        <a href="{{url_for('main.profile')}}"><img src="/static/images/black.jpg" alt="male-image"></img></a>
       </div>
 
-      <div class="col-md-4">
-          <h3 class="maletitle"> FOREST MAN </h3>
-          <p class="maletxt"> <b>Natural male boldness</b></p>
-            <div class="image">
-            <img src="static/images/male3.jpeg" alt="forestman-image"></img></a>
-            </div>
-        </div>
     </div>
 
   </div>
 </div>
+
 
 {% endblock%}

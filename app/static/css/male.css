@@ -1,36 +1,34 @@
 .image{
     width: 400px;
-    height: 480px;
+    height: 450px;
     overflow: hidden;
     margin-left: 20px;
     margin-top: 30px;
   }
     .image img {
-      width: 100%;
+     height: 100%;
   }
-  .details{
+  .title{
     position: absolute;
     top: 5%;
     left: 46%;
   }
   .maletitle{
     transform: translate(-50%, -50%);
-    color: white;
+    color:  whitesmoke;
     font-weight: 700;
   }
   .maletxt{
-    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: whitesmoke;
     font-weight: 300;
   }
   
   .image2{
     width: 400px;
-    height: 480px;
+    height: 450px;
     overflow: hidden;
-    margin-left: 20px;
     margin-top: 30px;
   }
     .image2 img {
@@ -50,10 +48,10 @@
     font-weight: 300;
   }
   
+  .imageslides{
+    margin-left: -40px;
+  } 
   .txt{
     font-weight: 700;
     text-align: center;
-  }
-  .imageslides{
-    margin-left: -40px;
   }
