@@ -7,11 +7,11 @@ from wtforms import ValidationError
 class RegistrationForm(FlaskForm):
 
     email = StringField('Email',validators=[Required(),Email()])
-    username = StringField('username',validators = [Required()])
+    username = StringField('Username',validators = [Required()])
     password = PasswordField('Password',validators = [Required(),
     EqualTo('password_confirm',message = 'Passwords must match')])
     password_confirm = PasswordField('Confirm Passwords',validators = [Required()])
-    submit = SubmitField('join us today')
+    submit = SubmitField('Join us today')
 
     def validate_email(self,data_field):
         if User.query.filter_by(email =data_field.data).first():
