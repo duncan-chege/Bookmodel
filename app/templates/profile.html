@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block content %}
+ <div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+      <h2> Model Profile</h2>
+    </div>
+
+    <div class="col-md-5">
+        <img src="static/images/index1.jpeg" alt="model-image"></img>
+    </div>
+
+    <div class="col-md-3">
+      <p><b> Name:</b> Blakk Man</p>
+      <p><b> Age:</b> Blakk Man</p>
+      <p><b> Height:</b> Blakk Man</p>
+      <p><b> Experience:</b> Blakk Man</p>
+      <a><button type="button" class="button-book">Book Now</button></a>
+    </div>
+
+    <div class="col-md-4">
+      {{ wtf.quick_form(book_form) }}
+    </div>
+
+ </div>
+ </div>
+{% endblock %}
