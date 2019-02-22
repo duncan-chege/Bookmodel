@@ -15,9 +15,9 @@ class User(UserMixin,db.Model):
     username = db.Column(db.String(255))
     role_id = db.Column(db.Integer,db.ForeignKey('roles.id'))
     email = db.Column(db.String(255),unique = True,index = True)
-    agency = db.Column(db.String(255))
     password_hash = db.Column(db.String(255))
     pass_secure = db.Column(db.String(255))
+    details = db.relationship('Detail',backref = 'details',lazy = "dynamic")
 
     @property
     def password(self):
@@ -46,3 +46,18 @@ class Role(db.Model):
 
     def __repr__(self):
         return f'User {self.name}'
+
+class Detail(UserMixin,db.Model):
+
+    __tablename__ = 'details'
+    id = db.Column(db.Integer,primary_key =True)
+    email = db.Column(db.String(255),unique = True,index = True)
+    model_name = db.Column(db.String(255))
+    model_age = db.Column(db.String(255))
+    event_venue = db.Column(db.String(255))
+    hours_booked = db.Column(db.String(255))
+    model_jd = db.Column(db.String(255))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    def save_detail(self):
+        db.session.add(self)
+        db.session.commit()

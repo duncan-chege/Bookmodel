@@ -1,19 +1,52 @@
-<head>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
+{% extends 'base.html'%}
 
-<div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
-    <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
-    <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
-    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
-    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+{% block content %}
+
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/male.css')}}">
+{% endblock%}
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+      <h3 class="txt"> CHOOSE A MODEL</h3>
+    </div>
+
+    <div class="col-md-4">
+      <div class="title">
+        <h3 class="maletitle"> FOREST MAN </h3>
+        <p class="maletxt"> <b>Natural male boldness</b></p>
+      </div>
+      <div class="image">
+        <img src="/static/images/white.jpeg" alt="forestman-image"></img>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="title">
+        <h3 class="maletitle2"> SNOW MAN </h3>
+        <p class="maletxt2"> <b>Accept your beauty</b></p>
+      </div>
+      <div class="image2">
+        <img src="/static/images/albino.jpeg" alt="snowman-image"></img>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="title">
+        <h3 class="maletitle"> BLAKK MAN </h3>
+        <p class="maletxt"> <b>Love your skin</b></p>
+      </div>
+      <div class="image">
+        <a href="{{url_for('main.profile')}}"><img src="/static/images/black.jpg" alt="male-image"></img></a>
+      </div>
+
+    </div>
+
   </div>
+</div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, options);
-  });
-  </script
+
+{% endblock%}

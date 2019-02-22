@@ -1,0 +1,15 @@
+.naav{
+    margin-bottom: 20px;
+    padding: 6px;
+}
+.head{
+    font-size: 17px;
+    font-weight: 700;
+    color: rgb(53, 53, 53);
+    letter-spacing: 0.9px;
+}
+.auth{
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(53, 53, 53);
+}

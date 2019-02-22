@@ -1,0 +1,57 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
+{% block content %}
+<head>
+  <script>src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/profile.css')}}">
+{% endblock%}
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+      <h2 class="model"> Model Profile</h2>
+    </div>
+
+    <div class="col-md-4">
+      <div class="image">
+        <img src="/static/images/black.jpg" alt="blakk-image"></img>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="details">
+        <p class="booked"><strong>BOOKED</strong></p>
+        <p><b> Name:</b> Blakk Man</p>
+        <p><b> Age:</b> 26yrs</p>
+        <p><b> Height:</b> 6.5"</p>
+        <p><b> Experience:</b> 3yrs</p>
+        <p><b> Preferenes:</b> Brands working with envrionmental conservation</p>
+        <button id="bat" class="button-book">Book Now</button>
+        <a href="{{url_for('main.male')}}"><button type="button" class="button-back">Back to Models</button></a>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form">
+        {{ wtf.quick_form(book_form) }}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+  $("#bat").click(function() {
+    $(".booked").show();
+    $(".form").show();
+    $(".button-book").hide();
+  });
+});
+</script>
+{% endblock %}
