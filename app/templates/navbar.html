@@ -9,11 +9,11 @@
 {% endblock%}
 
 <div class="w3-bar w3-light-gray naav">
-  <a href="/" class="w3-bar-item w3-button head">Book-a-Model</a>
+  <a href="/" class="w3-bar-item w3-button w3-hover-none head">Book-a-Model</a>
   {% if current_user.is_authenticated %}
-  <a href="{{url_for('auth.logout')}}" class="w3-bar-item w3-button w3-right auth">Log Out</a>
+  <a href="{{url_for('auth.logout')}}" class="w3-bar-item w3-button w3-right w3-hover-none auth">Log Out</a>
   {% else %}
-  <a href="{{url_for('auth.login')}}" class="w3-bar-item w3-button w3-right auth">Log In</a>
+  <a href="{{url_for('auth.login')}}" class="w3-bar-item w3-button w3-right w3-hover-none auth">Log In</a>
   {%endif%}
 </div>
 
