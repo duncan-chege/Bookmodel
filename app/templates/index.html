@@ -25,10 +25,10 @@
       </div>
 
       <div class="button">
-        <a href="{{url_for('auth.register')}}"><button type="button" class="button button-signup">Sign Up</button></a>
         {% if current_user.is_authenticated %}
         <p><a href="{{url_for('main.categories')}}"><button type="button" class="button button-categories">View Categories</button></a></p>
         {% else %}
+        <a href="{{url_for('auth.register')}}"><button type="button" class="button button-signup">Sign Up</button></a>
         {%endif%}
       </div>
 

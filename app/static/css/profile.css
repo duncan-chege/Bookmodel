@@ -17,8 +17,8 @@
       margin-left: 40px;
   }
   .button-book{
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
     border: 2px solid #d63424;
     margin-top: 10px;
     margin-left: 40px;
@@ -30,8 +30,8 @@
   color: white;
 }
 .button-back{
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid #2e2d2d;
   margin-top: 100px;
   margin-left: 27px;
@@ -41,4 +41,11 @@
 .button-back:hover {
 background-color: #252525;
 color: white;
+}
+.booked{
+  display: none;
+  color: red
+}
+.form{
+  display: none;
 }
