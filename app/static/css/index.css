@@ -25,12 +25,13 @@
 .button{
   transition-duration: 0.4s;
   display:inline-block;
+  margin-left: 110px;
 }
 .button-signup{
     background-color: white; 
     color: black; 
     border: 2px solid #d63424;
-    margin-left: 200px;
+    margin-left: 20px;
     margin-top: 30px;
     padding: 12px;
 }

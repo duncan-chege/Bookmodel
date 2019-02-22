@@ -1,31 +1,34 @@
- {% extends 'base.html'%}
+{% extends 'base.html'%}
 
 
 {% block content %}
-  <div class="container" style="">
 
-    <div class="" style="float:right;margin-top:120px;margin-right:40px;">
-      <p style="font-size:30px;">Choose a Model Type</p>
-      <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-          <br>
-          <br>
-          <a href="{{url_for('main.male')}}" class="btn btn-lg" style="background-color:orange;color:white;font-family: 'Felipa', cursive;">Male</a>
-          <br>
-          <br>
-          <br>
-          <a href="" class="btn btn-lg" style="background-color:orange;color:white;font-family: 'Felipa', cursive;">Female</a>
-        </div>
-        <div class="col-md-4"></div>
-      </div>
-    </div> -->
-     <div class="">
-      <div class="panel style="style="">
-          <img src="https://images.pexels.com/photos/965467/pexels-photo-965467.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" height="600px" width="600px">
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/categories.css')}}">
+{% endblock%}
 
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+      <h3 class="txt"> CHOOSE A CATEGORY</h3>
+    </div>
+
+    <div class="col-md-6">
+      <h3 class="maletitle"> MALE </h3>
+      <div class="image">
+        <a href="{{url_for('main.male')}}"><img src="static/images/male4.jpg" alt="male-image"></img></a>
       </div>
     </div>
-    <hr>
+
+    <div class="col-md-6">
+        <h3 class="femaletitle"> FEMALE </h3>
+        <div class="female-image">
+        <img src="static/images/female.jpeg" alt="female-image"></img>
+        </div>
+      </div>
+
   </div>
+</div>
 {% endblock %}
