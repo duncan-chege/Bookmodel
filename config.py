@@ -4,7 +4,7 @@ class Config:
 
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:1234@localhost/bookmodel'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://dunyung1:iamyung1@localhost/bookmodel'
 
     MAIL_SERVER = 'smtp.googlemail.com'
 
@@ -23,7 +23,7 @@ class ProdConfig(Config):
 
 class TestConfig(Config):
 
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:1234@localhost/bookmodel'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://dunyung1:iamyung1@localhost/bookmodel'
 
 class DevConfig(Config):
 
