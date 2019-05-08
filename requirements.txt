@@ -1,5 +1,6 @@
 alembic==1.0.7
 bleach==3.1.0
+blinker==1.4
 certifi==2018.11.29
 chardet==3.0.4
 Click==7.0
@@ -7,6 +8,7 @@ dominate==2.3.5
 Flask==1.0.2
 Flask-Bootstrap==3.3.7.1
 Flask-Login==0.4.1
+Flask-Mail==0.9.1
 Flask-Migrate==2.4.0
 Flask-Moment==0.7.0
 Flask-PageDown==0.2.2
